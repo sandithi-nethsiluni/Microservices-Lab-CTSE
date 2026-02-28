@@ -1,0 +1,625 @@
+{
+  "info": {
+    "_postman_id": "1fb506d3-fe4b-43b8-81dc-04bf8cde7798",
+    "name": "Microservices Lab",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "44624862",
+    "_collection_link": "https://go.postman.co/collection/44624862-1fb506d3-fe4b-43b8-81dc-04bf8cde7798?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "item-service",
+      "item": [
+        {
+          "name": "Returns list of all items",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/items",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "items"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Returns list of all items",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/items",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "items"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "25"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"19-2aVg9d7SOff31YHkYU0xgZ7iZ/0\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 28 Feb 2026 20:43:37 GMT"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    \"Book\",\n    \"Laptop\",\n    \"Phone\"\n]"
+            }
+          ]
+        },
+        {
+          "name": "Create a new item",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Headphones\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/items",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "items"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Create a new item",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"Headphones\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/items",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "items"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "44"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"2c-ighKN8p4DG9D6uWOQuL1pB7iafA\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 28 Feb 2026 20:44:11 GMT"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Item added\",\n    \"item\": \"Headphones\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get item by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/items/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "items",
+                "1"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get item by ID",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/items/1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "items",
+                    "1"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "8"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"8-yASrQQzD49I0UlNfIzQJQjJsVJA\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 28 Feb 2026 20:44:23 GMT"
+                }
+              ],
+              "cookie": [],
+              "body": "\"Laptop\""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "order-service",
+      "item": [
+        {
+          "name": "Returns all orders",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/orders",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "orders"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Returns all orders",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/orders",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "orders"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 28 Feb 2026 20:45:52 GMT"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"item\": \"Headphones\",\n        \"quantity\": 1,\n        \"customerId\": \"C004\",\n        \"id\": 1,\n        \"status\": \"PENDING\"\n    },\n    {\n        \"item\": \"Laptop\",\n        \"quantity\": 2,\n        \"customerId\": \"C001\",\n        \"id\": 2,\n        \"status\": \"PENDING\"\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "Place a new order",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n \"item\": \"Laptop\",\r\n \"quantity\": 2,\r\n \"customerId\": \"C001\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/orders",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "orders"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Place a new order",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n \"item\": \"Laptop\",\r\n \"quantity\": 2,\r\n \"customerId\": \"C001\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/orders",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "orders"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 28 Feb 2026 20:45:42 GMT"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"item\": \"Laptop\",\n    \"quantity\": 2,\n    \"customerId\": \"C001\",\n    \"id\": 2,\n    \"status\": \"PENDING\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get order by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/orders/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "orders",
+                "1"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get order by ID",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/orders/1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "orders",
+                    "1"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 28 Feb 2026 20:46:02 GMT"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"item\": \"Headphones\",\n    \"quantity\": 1,\n    \"customerId\": \"C004\",\n    \"id\": 1,\n    \"status\": \"PENDING\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "payment-service",
+      "item": [
+        {
+          "name": "Returns all payments",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/payments",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "payments"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Returns all payments",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/payments",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "payments"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 28 Feb 2026 20:51:49 GMT"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"orderId\": 1,\n        \"amount\": 1299.99,\n        \"method\": \"CARD\",\n        \"id\": 1,\n        \"status\": \"SUCCESS\"\n    },\n    {\n        \"orderId\": 2,\n        \"amount\": 599.99,\n        \"method\": \"CASH\",\n        \"id\": 2,\n        \"status\": \"SUCCESS\"\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "Process a payment",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n \"orderId\": 1,\r\n \"amount\": 1299.99,\r\n \"method\": \"CARD\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/payments/process",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "payments",
+                "process"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Process a payment",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n \"orderId\": 1,\r\n \"amount\": 1299.99,\r\n \"method\": \"CARD\"\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/payments/process",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "payments",
+                    "process"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 28 Feb 2026 20:51:13 GMT"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"orderId\": 1,\n    \"amount\": 1299.99,\n    \"method\": \"CARD\",\n    \"id\": 1,\n    \"status\": \"SUCCESS\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get payment status",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/payments/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "payments",
+                "1"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get payment status",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/payments/1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "payments",
+                    "1"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 28 Feb 2026 20:51:57 GMT"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"orderId\": 1,\n    \"amount\": 1299.99,\n    \"method\": \"CARD\",\n    \"id\": 1,\n    \"status\": \"SUCCESS\"\n}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
